@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookly - João Pedro Rybarczyk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;1,400&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #000000;
+            --text-color: #ffffff;
+            --accent-color: #9b59b6;
+            --font-sans: 'Inter', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-5px);
+        }
+
+        .project-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, rgba(155, 89, 182, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #9b59b6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 2rem;
+        }
+
+        .hero-image {
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(155, 89, 182, 0.3);
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .project-details {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+        }
+
+        .details-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .details-content h2 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .details-content p {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .features {
+            padding: 4rem 2rem;
+            background: #000000;
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: rgba(155, 89, 182, 0.1);
+            border-color: rgba(155, 89, 182, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .feature-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .back-button {
+                top: 1rem;
+                left: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" class="back-button">← Voltar</a>
+
+    <section class="project-hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Bookly</h1>
+                <p class="subtitle">Smart Appointment Scheduling</p>
+                <p style="color: rgba(255, 255, 255, 0.8); font-size: 1.1rem;">Uma solução moderna para transformar a
+                    forma como você gerencia compromissos e reservas.</p>
+            </div>
+            <div class="hero-image">
+                <img src="bookly.png" alt="Bookly Dashboard">
+            </div>
+        </div>
+    </section>
+
+    <section class="project-details">
+        <div class="details-content">
+            <h2>Agendamento Inteligente</h2>
+
+            <p>O Bookly é uma solução moderna para transformar a forma como você gerencia compromissos e reservas. Com
+                ele, você oferece aos seus clientes uma página de agendamento online disponível 24/7, onde eles podem
+                marcar serviços a qualquer hora — sem telefonemas, sem trocas de mensagens, com apenas alguns cliques.
+            </p>
+
+            <p>A plataforma permite gerenciar toda a sua equipe: cada profissional pode ter seus serviços, horários e
+                agenda próprios, e o sistema sincroniza tudo automaticamente. Múltiplos profissionais, múltiplos
+                serviços e múltiplas agendas num só lugar.</p>
+
+            <p>Com integração ao Google Calendar, os agendamentos aparecem diretamente no seu calendário — evitando
+                conflitos de horário e otimizando seu tempo.</p>
+
+            <p>Além disso, o Bookly dá mais profissionalismo ao seu serviço: oferece um painel de controle simples e
+                intuitivo, controle de clientes, histórico de agendamentos e traz praticidade tanto para quem oferece o
+                serviço quanto para quem agenda.</p>
+
+            <p>Resumindo: o Bookly facilita a vida de qualquer prestador de serviço, reduz as perdas de tempo com
+                logística de agendamento e ajuda a manter a agenda sempre organizada — deixando você livre para focar no
+                que realmente importa.</p>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>📅 Agendamento 24/7</h3>
+                <p>Seus clientes podem agendar serviços a qualquer hora, sem telefonemas ou mensagens.</p>
+            </div>
+            <div class="feature-card">
+                <h3>👥 Gestão de Equipe</h3>
+                <p>Múltiplos profissionais com serviços, horários e agendas próprias em um só lugar.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔄 Google Calendar</h3>
+                <p>Sincronização automática com seu calendário para evitar conflitos de horário.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📊 Painel Intuitivo</h3>
+                <p>Controle completo de clientes, histórico e agendamentos em uma interface simples.</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

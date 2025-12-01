@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>João Pedro Rybarczyk - Digital and UX/UI Designer</title>
+    <title>João Pedro Rybarczyk - Coder and UI/UX Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&family=Pinyon+Script&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&family=Roboto+Mono:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -17,19 +17,21 @@
     <div class="container">
         <header>
             <div class="top-links left">
-                <a href="https://www.instagram.com/rybarckx/" target="_blank">INSTAGRAM</a>
+                <a href="https://www.instagram.com/rybarckx/" target="_blank" class="animated-link"
+                    data-text="INSTAGRAM">INSTAGRAM</a>
             </div>
             <div class="top-links center">
                 <!-- Behance removed -->
             </div>
             <div class="top-links right">
-                <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-rybarczyk-7160b6246/" target="_blank">LINKEDIN</a>
+                <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-rybarczyk-7160b6246/" target="_blank"
+                    class="animated-link" data-text="LINKEDIN">LINKEDIN</a>
             </div>
         </header>
 
         <main class="hero">
-            <div class="side-info left">
-                <p>JOÃO PEDRO<br>RYBARCZYK</p>
+            <div class="hero-name">
+                <h2 class="stylized-name">João Pedro Rybarczyk</h2>
             </div>
 
             <div class="hero-content">
@@ -46,9 +48,9 @@
 
         <nav class="bottom-nav">
             <ul>
-                <li><a href="#projects" id="projects-link">SELECTED PROJECTS</a></li>
-                <li><a href="#">ABOUT ME</a></li>
-                <li><a href="#">CV</a></li>
+                <li><a href="#projects">SELECTED PROJECTS</a></li>
+                <li><a href="#about">ABOUT ME</a></li>
+                <li><a href="#cv">CV</a></li>
             </ul>
         </nav>
 
@@ -90,19 +92,128 @@
             <h2>Selected Projects</h2>
             <div class="project-grid">
                 <div class="project-item">
-                    <div class="project-image"></div>
-                    <h3>Project One</h3>
-                    <p>Branding / UI</p>
+                    <a href="bookly.html" class="project-link">
+                        <div class="project-image"
+                            style="background-image: url('bookly.png'); background-size: cover; background-position: center;">
+                        </div>
+                        <h3>Bookly</h3>
+                        <p>Smart Appointment Scheduling</p>
+                    </a>
                 </div>
                 <div class="project-item">
-                    <div class="project-image"></div>
-                    <h3>Project Two</h3>
-                    <p>Web Design</p>
+                    <a href="calflow-ai.html" class="project-link">
+                        <div class="project-image"
+                            style="background-image: url('calflow-ai.png'); background-size: cover; background-position: center;">
+                        </div>
+                        <h3>CalFlow AI</h3>
+                        <p>AI-Powered Nutrition Tracker</p>
+                    </a>
                 </div>
-                <div class="project-item">
-                    <div class="project-image"></div>
-                    <h3>Project Three</h3>
-                    <p>Mobile App</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h2>About Me</h2>
+            <div class="about-text">
+                <p>Sempre fui atraído por tudo que une lógica e criatividade. Esse instinto acabou me levando
+                    naturalmente para o universo da tecnologia. Muito antes de escrever minha primeira linha de código,
+                    eu já tentava entender os padrões por trás das coisas digitais — por que os aplicativos funcionam de
+                    um certo jeito, o que torna uma experiência intuitiva e como as máquinas "pensam".</p>
+
+                <p>Quando finalmente entrei no mundo da programação, tudo fez sentido. Descobri um espaço onde ideias
+                    podem ganhar forma do zero e onde cada desafio tem um caminho lógico a ser explorado. O que começou
+                    como curiosidade virou fascínio: aprender novas linguagens, entender conceitos diferentes e enxergar
+                    a tecnologia de uma forma mais profunda.</p>
+
+                <p>Com o tempo, a inteligência artificial despertou ainda mais o meu interesse. A possibilidade de uma
+                    máquina entender contexto, aprender padrões e ajudar pessoas de forma inteligente sempre me pareceu
+                    algo revolucionário. A IA me mostrou um lado da tecnologia que une intuição humana com potência
+                    computacional, e isso ampliou completamente minha visão sobre o futuro.</p>
+
+                <p>Hoje, meus interesses vivem nesse encontro: a criatividade de construir, a lógica da programação e a
+                    inovação da IA. Estou sempre aprendendo, experimentando e expandindo minha perspectiva. A tecnologia
+                    está em constante evolução — e é justamente essa evolução que me inspira a crescer junto com ela.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cv" class="cv-section">
+        <div class="cv-content">
+            <h2>Curriculum Vitae</h2>
+
+            <div class="cv-header">
+                <h3>João Pedro Rodrigues Rybarczyk</h3>
+                <div class="cv-contact">
+                    <p><strong>Data de nascimento:</strong> 21/09/2006</p>
+                    <p><strong>Endereço:</strong> Rua Jacaranda, 119 - Guaíba, Rio Grande do Sul, Brasil</p>
+                    <p><strong>Telefone:</strong> (51) 98548-5940</p>
+                    <p><strong>Email:</strong> joaopedro.ry@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="cv-section-block">
+                <h4>Formação Acadêmica</h4>
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <strong>Cursando Graduação Engenharia de Computação</strong>
+                        <span class="cv-date">Conclusão: 12/2029</span>
+                    </div>
+                    <p class="cv-institution">UERGS</p>
+                    <p class="cv-detail">4º semestre</p>
+                </div>
+            </div>
+
+            <div class="cv-section-block">
+                <h4>Cursos e Aprimoramentos</h4>
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <strong>CS50: Introduction to Computer Science</strong>
+                        <span class="cv-status">CURSANDO</span>
+                    </div>
+                    <p class="cv-institution">Harvard - Online</p>
+                    <p class="cv-detail">Carga horária: 20 horas</p>
+                    <p class="cv-description">Este curso ensina como resolver problemas, tanto com quanto sem código,
+                        com ênfase em correção, design e estilo.</p>
+                </div>
+
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <strong>Participação em Grupo de Estudos</strong>
+                        <span class="cv-date">21/03/25 - 20/04/25</span>
+                    </div>
+                    <p class="cv-institution">PUCRS - Presencial</p>
+                    <p class="cv-detail">Carga horária: 20 horas semanais</p>
+                    <p class="cv-description">Trabalhei em projetos com JavaScript, CSS, HTML. Fiz utilização de
+                        Node.js, Express e MongoDB em um projeto backend.</p>
+                </div>
+            </div>
+
+            <div class="cv-section-block">
+                <h4>Habilidades</h4>
+                <div class="cv-skills">
+                    <div class="cv-skills-column">
+                        <h5>Técnicas</h5>
+                        <ul>
+                            <li>JavaScript, HTML, CSS</li>
+                            <li>Next.js, Tailwind, TypeScript</li>
+                            <li>Automação com Inteligência Artificial (n8n, ferramentas de IA)</li>
+                            <li>Firebase Studio, Firestore</li>
+                            <li>Proficiência em ferramentas de Inteligência Artificial</li>
+                            <li>Inglês avançado</li>
+                        </ul>
+                    </div>
+                    <div class="cv-skills-column">
+                        <h5>Comportamentais</h5>
+                        <ul>
+                            <li>Facilidade de adaptação</li>
+                            <li>Bom relacionamento interpessoal</li>
+                            <li>Proatividade e comunicação</li>
+                            <li>Resolução de problemas</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

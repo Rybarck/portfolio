@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalFlow AI - João Pedro Rybarczyk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;1,400&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #000000;
+            --text-color: #ffffff;
+            --accent-color: #00aaff;
+            --font-sans: 'Inter', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-5px);
+        }
+
+        .project-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, rgba(0, 170, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #00aaff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 2rem;
+        }
+
+        .hero-image {
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 170, 255, 0.3);
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .project-details {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+        }
+
+        .details-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .details-content h2 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .details-content p {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .features {
+            padding: 4rem 2rem;
+            background: #000000;
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: rgba(0, 170, 255, 0.1);
+            border-color: rgba(0, 170, 255, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .feature-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .back-button {
+                top: 1rem;
+                left: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" class="back-button">← Voltar</a>
+
+    <section class="project-hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>CalFlow AI</h1>
+                <p class="subtitle">AI-Powered Nutrition Tracker</p>
+                <p style="color: rgba(255, 255, 255, 0.8); font-size: 1.1rem;">Transformando a relação das pessoas com
+                    alimentação, nutrição e bem-estar através de inteligência artificial.</p>
+            </div>
+            <div class="hero-image">
+                <img src="calflow-ai.png" alt="CalFlow AI App">
+            </div>
+        </div>
+    </section>
+
+    <section class="project-details">
+        <div class="details-content">
+            <h2>Sobre o Projeto</h2>
+
+            <p>CalFlow AI é um projeto criado para transformar a relação das pessoas com alimentação, nutrição e
+                bem-estar por meio de inteligência artificial. A ideia central é simples: tornar o processo de registrar
+                refeições mais rápido, intuitivo e inteligente — sem depender de digitação manual ou longas pesquisas em
+                tabelas nutricionais.</p>
+
+            <p>Com o CalFlow AI, o usuário pode registrar sua comida apenas tirando uma foto. A IA analisa
+                automaticamente a refeição, identifica alimentos, estima nutrientes como calorias, proteínas,
+                carboidratos e gorduras, e oferece uma visão completa do consumo diário. O objetivo é entregar
+                praticidade, precisão e uma experiência que se adapta ao ritmo de vida de cada pessoa.</p>
+
+            <p>Além disso, o projeto integra tecnologias modernas para criar um fluxo fluido — desde onboarding
+                inteligente até recomendações personalizadas baseadas nos hábitos alimentares do usuário. A proposta não
+                é apenas contar calorias, mas facilitar escolhas melhores, tornar a nutrição mais acessível e trazer
+                informações úteis de um jeito simples e humano.</p>
+
+            <p>CalFlow AI é sobre tecnologia aplicada ao dia a dia: rápido, intuitivo, visual e impulsionado por IA.</p>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>📸 Registro por Foto</h3>
+                <p>Tire uma foto da sua refeição e deixe a IA fazer o resto. Sem digitação, sem complicação.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🧠 Análise Inteligente</h3>
+                <p>Identificação automática de alimentos e estimativa precisa de nutrientes usando IA avançada.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📊 Visão Completa</h3>
+                <p>Acompanhe calorias, proteínas, carboidratos e gorduras de forma visual e intuitiva.</p>
+            </div>
+            <div class="feature-card">
+                <h3>✨ Experiência Fluida</h3>
+                <p>Interface moderna e responsiva que se adapta ao seu ritmo de vida.</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
