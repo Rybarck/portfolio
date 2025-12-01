@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Pedro Rybarczyk - Digital and UX/UI Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&family=Pinyon+Script&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="top-links left">
+                <a href="https://www.instagram.com/rybarckx/" target="_blank">INSTAGRAM</a>
+            </div>
+            <div class="top-links center">
+                <!-- Behance removed -->
+            </div>
+            <div class="top-links right">
+                <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-rybarczyk-7160b6246/" target="_blank">LINKEDIN</a>
+            </div>
+        </header>
+
+        <main class="hero">
+            <div class="side-info left">
+                <p>JOÃO PEDRO<br>RYBARCZYK</p>
+            </div>
+
+            <div class="hero-content">
+                <h1 class="clip-text">
+                    <span class="line">CO<span class="serif">D</span>ER <span class="serif">AND</span></span>
+                    <span class="line">UI/UX DE<span class="serif">V</span>ELOPER</span>
+                </h1>
+            </div>
+
+            <div class="side-info right">
+                <!-- Experience removed -->
+            </div>
+        </main>
+
+        <nav class="bottom-nav">
+            <ul>
+                <li><a href="#projects" id="projects-link">SELECTED PROJECTS</a></li>
+                <li><a href="#">ABOUT ME</a></li>
+                <li><a href="#">CV</a></li>
+            </ul>
+        </nav>
+
+        <div class="cta-container">
+            <a href="#" class="cta-button">CONTACT ME</a>
+        </div>
+
+        <div class="side-tab">
+            <span>Honors</span>
+        </div>
+    </div>
+
+    <div class="background-shapes">
+        <svg class="fluid-line" viewBox="0 0 1440 800" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#00ffff;stop-opacity:0" />
+                    <stop offset="20%" style="stop-color:#00ffff;stop-opacity:0.8" />
+                    <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
+                    <stop offset="80%" style="stop-color:#0000ff;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#0000ff;stop-opacity:0" />
+                </linearGradient>
+                <filter id="glow">
+                    <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+                    <feMerge>
+                        <feMergeNode in="coloredBlur" />
+                        <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                </filter>
+            </defs>
+            <path class="animated-path" d="M-100,400 C200,200 400,600 700,400 S1200,200 1540,400" />
+            <path class="animated-path delay-1" d="M-100,450 C200,250 400,650 700,450 S1200,250 1540,450" />
+        </svg>
+        <div class="noise"></div>
+    </div>
+
+    <section id="projects" class="projects-section">
+        <div class="projects-content">
+            <h2>Selected Projects</h2>
+            <div class="project-grid">
+                <div class="project-item">
+                    <div class="project-image"></div>
+                    <h3>Project One</h3>
+                    <p>Branding / UI</p>
+                </div>
+                <div class="project-item">
+                    <div class="project-image"></div>
+                    <h3>Project Two</h3>
+                    <p>Web Design</p>
+                </div>
+                <div class="project-item">
+                    <div class="project-image"></div>
+                    <h3>Project Three</h3>
+                    <p>Mobile App</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
